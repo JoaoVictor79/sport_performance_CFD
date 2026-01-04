@@ -1,0 +1,86 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceFeatureExtract
+Date   : Jan 04 2026
+Time   : 08:11:27
+Host   : PC-Jorge
+PID    : 6366
+I/O    : uncollated
+Case   : /home/jorge/Documentos/OpenFOAM/cyclist
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+Note: Feature line extraction only valid on closed manifold surfaces
+
+Reading surfaceFeatureExtractDict
+
+Surfaces     : cyclist.stl
+Output       : cyclist
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 2110602 in 2 region(s)
+Vertices     : 1055169
+Bounding Box : (-0.12377 -0.26671 -2.04091e-08) (1.70354 0.28782 1.80436)
+
+Constructing feature set from included angle 120
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 559
+    edges  : 4698
+    of which
+        region edges   : 19
+        external edges : 2454
+        internal edges : 2225
+
+Final Feature set:
+    points : 5736
+    of which
+        convex             : 146
+        concave            : 264
+        mixed              : 149
+        non-feature        : 5177
+    edges  : 4698
+    of which
+        external edges     : 2499
+        internal edges     : 2190
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 9
+
+Writing extendedFeatureEdgeMesh to "/home/jorge/Documentos/OpenFOAM/cyclist/constant/extendedFeatureEdgeMesh/cyclist.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/home/jorge/Documentos/OpenFOAM/cyclist/constant/extendedFeatureEdgeMesh/cyclist"
+Writing 146 convex feature points to "/home/jorge/Documentos/OpenFOAM/cyclist/constant/extendedFeatureEdgeMesh/cyclist_convexFeaturePts.obj"
+Writing 264 concave feature points to "/home/jorge/Documentos/OpenFOAM/cyclist/constant/extendedFeatureEdgeMesh/cyclist_concaveFeaturePts.obj"
+Writing 149 mixed feature points to "/home/jorge/Documentos/OpenFOAM/cyclist/constant/extendedFeatureEdgeMesh/cyclist_mixedFeaturePts.obj"
+Writing 149 mixed feature point structure to "/home/jorge/Documentos/OpenFOAM/cyclist/constant/extendedFeatureEdgeMesh/cyclist_mixedFeaturePtsStructure.obj"
+Writing 2499 external edges to "/home/jorge/Documentos/OpenFOAM/cyclist/constant/extendedFeatureEdgeMesh/cyclist_externalEdges.obj"
+Writing 2190 internal edges to "/home/jorge/Documentos/OpenFOAM/cyclist/constant/extendedFeatureEdgeMesh/cyclist_internalEdges.obj"
+Writing 0 flat edges to "/home/jorge/Documentos/OpenFOAM/cyclist/constant/extendedFeatureEdgeMesh/cyclist_flatEdges.obj"
+Writing 0 open edges to "/home/jorge/Documentos/OpenFOAM/cyclist/constant/extendedFeatureEdgeMesh/cyclist_openEdges.obj"
+Writing 9 multiple edges to "/home/jorge/Documentos/OpenFOAM/cyclist/constant/extendedFeatureEdgeMesh/cyclist_multipleEdges.obj"
+Writing 19 region edges to "/home/jorge/Documentos/OpenFOAM/cyclist/constant/extendedFeatureEdgeMesh/cyclist_regionEdges.obj"
+Writing 4698 edge directions to "/home/jorge/Documentos/OpenFOAM/cyclist/constant/extendedFeatureEdgeMesh/cyclist_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/home/jorge/Documentos/OpenFOAM/cyclist/constant/triSurface/cyclist.eMesh"
+ExecutionTime = 3.36 s  ClockTime = 4 s
+
+End
+

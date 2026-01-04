@@ -1,0 +1,127 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : reconstructParMesh -constant
+Date   : Jan 04 2026
+Time   : 08:13:46
+Host   : PC-Jorge
+PID    : 6801
+I/O    : uncollated
+Case   : /home/jorge/Documentos/OpenFOAM/cyclist
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Merge individual processor meshes back into one master mesh.
+Use if the original master mesh has been deleted or the processor meshes
+have been modified (topology change).
+This tool will write the resulting mesh to a new time step and construct
+xxxxProcAddressing files in the processor meshes so reconstructPar can be
+used to regenerate the fields on the master mesh.
+
+Not well tested & use at your own risk!
+
+Merge assuming correct, fully matched procBoundaries.
+
+Found 9 processor directories
+    Reading database "cyclist/processor0"
+    Reading database "cyclist/processor1"
+    Reading database "cyclist/processor2"
+    Reading database "cyclist/processor3"
+    Reading database "cyclist/processor4"
+    Reading database "cyclist/processor5"
+    Reading database "cyclist/processor6"
+    Reading database "cyclist/processor7"
+    Reading database "cyclist/processor8"
+
+Time = constant
+
+
+Writing merged mesh to "constant/polyMesh"
+
+Reconstructing addressing from processor meshes to the newly reconstructed mesh
+
+Processor 0
+Read processor mesh: "cyclist/processor0"
+Writing addressing : "cyclist/processor0/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 1
+Read processor mesh: "cyclist/processor1"
+Writing addressing : "cyclist/processor1/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 2
+Read processor mesh: "cyclist/processor2"
+Writing addressing : "cyclist/processor2/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 3
+Read processor mesh: "cyclist/processor3"
+Writing addressing : "cyclist/processor3/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 4
+Read processor mesh: "cyclist/processor4"
+Writing addressing : "cyclist/processor4/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 5
+Read processor mesh: "cyclist/processor5"
+Writing addressing : "cyclist/processor5/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 6
+Read processor mesh: "cyclist/processor6"
+Writing addressing : "cyclist/processor6/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 7
+Read processor mesh: "cyclist/processor7"
+Writing addressing : "cyclist/processor7/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 8
+Read processor mesh: "cyclist/processor8"
+Writing addressing : "cyclist/processor8/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+End
+
